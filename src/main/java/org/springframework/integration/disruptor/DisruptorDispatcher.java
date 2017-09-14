@@ -20,6 +20,7 @@ public class DisruptorDispatcher extends AbstractDispatcher {
 
 	@SuppressWarnings("unchecked")
 	private Disruptor<MessagingEvent> registerHandlerFor(final Disruptor<MessagingEvent> disruptor) {
+		
 		disruptor.handleEventsWith(new EventHandler<MessagingEvent>() {
 
 			public void onEvent(final MessagingEvent event, final long sequence, final boolean endOfBatch) throws Exception {
